@@ -15,12 +15,9 @@ None.
 
 ```yaml
 module "rg_region1" {
-  # Local use
-  source = "../../terraform-azurerm-resourcegroup"
-
-  # Terraform Cloud/Enterprise use
-  # source  = "app.terraform.io/embergertf/resourcegroup/azurerm"
-  # version = "~>1.0.0"
+  # Terraform Cloud PMR use
+  source  = "app.terraform.io/embergertf/resourcegroup/azurerm"
+  version = "~>1.0.0"
 
   name_override = var.name_override
 

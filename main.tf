@@ -14,12 +14,9 @@
 # - Generate name for the Resource Group with base module
 # -
 module "rg_name" {
-  # Local use
-  source = "../terraform-azurerm-base"
-
-  # Terraform Cloud/Enterprise use
-  # source  = "app.terraform.io/embergertf/base/azurerm"
-  # version = "~>1.0.0"
+  # Terraform Cloud PMR use
+  source  = "app.terraform.io/embergertf/base/azurerm"
+  version = "~>1.0.0"
 
   name_override = var.name_override
 
