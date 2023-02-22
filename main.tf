@@ -17,7 +17,7 @@
 module "rg_name" {
   # Terraform Cloud PMR use
   source  = "app.terraform.io/embergertf/base/azurerm"
-  version = "~>1.0.0"
+  version = "~>1.1.0"
 
   name_override = var.name_override
 
