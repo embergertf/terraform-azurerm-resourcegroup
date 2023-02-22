@@ -1,11 +1,12 @@
 #
-# Copyright 2022 Emmanuel Bergerat
+# Copyright 2023 Emmanuel Bergerat
 #
 
-# Created  on: Oct. 11th, 2022
-# Created  by: Emmanuel
-# Modified on: 
-# Modified by: 
+# Created  on:  Oct. 11th, 2022
+# Created  by:  Emmanuel
+# Modified on:  Feb. 22th, 2023
+# Modified by:  Emmanuel
+# Modification: Added CAC and CAE region codes
 # Overview:
 #   This module:
 #   - Creates an Azure Resource Group
