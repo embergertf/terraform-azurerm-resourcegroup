@@ -18,7 +18,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 
 - Added CAC & CAE Azure regions' codes
-- 
+
 ## [1.0.0] - 2022-10-18 - Initial version release
 
 ### Added
