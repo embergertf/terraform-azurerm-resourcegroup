@@ -53,7 +53,7 @@ variable "iterator" {
 variable "owner" {
   type        = string
   description = "(Optional) Deployed resources owner."
-  default     = "emberger"
+  default     = null
 }
 variable "additional_tags" {
   description = "(Optional) Additional tags for the Resource Group."
