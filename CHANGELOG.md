@@ -13,6 +13,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 ### Removed -->
 
+## [1.3.0] - 2023-02-23 - Removed validation on `region_code`
+
+### Changed
+
+- `region_code` has a `null` default and no more validation. Validation is left to the `base` module to avoid cascading updates.
+
 ## [1.2.0] - 2023-02-22 - Replaces 3 defaults by `null`
 
 ### Changed
