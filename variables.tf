@@ -18,7 +18,7 @@ variable "name_override" {
 
 variable "region_code" {
   type        = string
-  description = "(Optional) Resource region code."
+  description = "(Optional) Resource region code. Must be compatible with base module. Example: `cac`."
   default     = null
 }
 variable "subsc_code" {
