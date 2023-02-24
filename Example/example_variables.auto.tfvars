@@ -1,5 +1,5 @@
 #
-# Copyright 2022 Emmanuel Bergerat
+# Copyright 2023 - Emmanuel Bergerat
 #
 
 #--------------------------------------------------------------
@@ -13,5 +13,6 @@ base_name    = "embergertf"
 # additional_name = ""
 iterator = "01"
 additional_tags = {
-  test_by = "emberger"
+  Test_by = "Manu",
+  GitHub_org = "embergertf"
 }
