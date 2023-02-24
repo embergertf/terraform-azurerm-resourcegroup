@@ -6,7 +6,7 @@
 # Created  by:  Emmanuel
 # Modified on:  Feb. 23rd, 2023
 # Modified by:  Emmanuel
-# Modification: Removed region validation + use new base module location logic
+# Modification: Use of the updated base module v3.0.0
 # Overview:
 #   This module:
 #   - Creates an Azure Resource Group
@@ -17,7 +17,7 @@
 module "rg_name" {
   # Terraform Cloud PMR use
   source  = "app.terraform.io/embergertf/base/azurerm"
-  version = "~>2.0.1"
+  version = "~>3.0.0"
 
   name_override = var.name_override
 
