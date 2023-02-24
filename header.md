@@ -14,22 +14,23 @@ None.
 ## Example
 
 ```yaml
-module "rg_region1" {
+module "rg" {
   # Terraform Cloud PMR use
   source  = "app.terraform.io/embergertf/resourcegroup/azurerm"
   version = "~>1.0.0"
 
-  name_override = var.name_override
+  region_code     = var.main_region_code
+  subsc_code      = var.subsc_nickname
+  base_name       = "hub"
+  additional_name = "terraform"
+  iterator        = "01"
 
-  region_code     = var.region_code1
-  subsc_code      = var.subsc_code
-  env             = var.env
-  base_name       = var.base_name
-  additional_name = var.additional_name
-  iterator        = var.iterator
+  additional_tags = local.base_tags
 
-  owner      = var.owner
-  add_random = var.add_random
-  rnd_length = var.rnd_length
+  # name_override = var.name_override
+  # env           = ""
+  # owner         = var.owner
+  # add_random    = false
+  # rnd_length    = 0
 }
 ```
