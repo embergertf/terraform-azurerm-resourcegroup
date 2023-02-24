@@ -17,7 +17,7 @@ None.
 module "rg" {
   # Terraform Cloud PMR use
   source  = "app.terraform.io/embergertf/resourcegroup/azurerm"
-  version = "~>1.0.0"
+  version = "~>1.3.3"
 
   region_code     = var.main_region_code
   subsc_code      = var.subsc_nickname
@@ -26,11 +26,5 @@ module "rg" {
   iterator        = "01"
 
   additional_tags = local.base_tags
-
-  # name_override = var.name_override
-  # env           = ""
-  # owner         = var.owner
-  # add_random    = false
-  # rnd_length    = 0
 }
 ```

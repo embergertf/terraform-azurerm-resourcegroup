@@ -1,11 +1,14 @@
 #
-# Copyright 2022 Emmanuel Bergerat
+# Copyright 2023 Emmanuel Bergerat
 #
 
 # -
 # Required Variables
 # -
-
+variable "region_code" {
+  type        = string
+  description = "(Required) Resource region code. Must be compatible with base module. Example: `cac`."
+}
 
 # -
 # Optional Variables
@@ -13,12 +16,6 @@
 variable "name_override" {
   type        = string
   description = "(Optional) Full name to override all the name generation logic. Example: 'biglittletest' will generate the resource group name \"'rg-biglittletest'\"."
-  default     = null
-}
-
-variable "region_code" {
-  type        = string
-  description = "(Optional) Resource region code. Must be compatible with base module. Example: `cac`."
   default     = null
 }
 variable "subsc_code" {

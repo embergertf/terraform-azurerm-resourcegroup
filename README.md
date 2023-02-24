@@ -18,7 +18,7 @@ None.
 module "rg" {
   # Terraform Cloud PMR use
   source  = "app.terraform.io/embergertf/resourcegroup/azurerm"
-  version = "~>1.0.0"
+  version = "~>1.3.3"
 
   region_code     = var.main_region_code
   subsc_code      = var.subsc_nickname
@@ -27,12 +27,6 @@ module "rg" {
   iterator        = "01"
 
   additional_tags = local.base_tags
-
-  # name_override = var.name_override
-  # env           = ""
-  # owner         = var.owner
-  # add_random    = false
-  # rnd_length    = 0
 }
 ```
 
@@ -56,6 +50,7 @@ module "rg" {
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
+| <a name="input_region_code"></a> [region\_code](#input\_region\_code) | (Required) Resource region code. Must be compatible with base module. Example: `cac`. | `string` | n/a | yes |
 | <a name="input_add_random"></a> [add\_random](#input\_add\_random) | (Optional) When set to `true`, it will add a `rnd_length`'s long `random_number` at the name's end. | `bool` | `false` | no |
 | <a name="input_additional_name"></a> [additional\_name](#input\_additional\_name) | (Optional) Additional suffix to create resource uniqueness. It will be separated by a `'-'` from the "name's generated" suffix. Example: `lan1`. | `string` | `null` | no |
 | <a name="input_additional_tags"></a> [additional\_tags](#input\_additional\_tags) | (Optional) Additional tags for the Resource Group. | `map(string)` | `null` | no |
@@ -65,7 +60,6 @@ module "rg" {
 | <a name="input_max_length"></a> [max\_length](#input\_max\_length) | (Optional) Set the maximum length of the generated name. If over, the name will be trimmed to the `max_length`, considering the eventual `random_number` suffix. See this link for reference: [Resource name rules](https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/resource-name-rules) | `number` | `63` | no |
 | <a name="input_name_override"></a> [name\_override](#input\_name\_override) | (Optional) Full name to override all the name generation logic. Example: 'biglittletest' will generate the resource group name "'rg-biglittletest'". | `string` | `null` | no |
 | <a name="input_owner"></a> [owner](#input\_owner) | (Optional) Deployed resources owner. | `string` | `null` | no |
-| <a name="input_region_code"></a> [region\_code](#input\_region\_code) | (Optional) Resource region code. Must be compatible with base module. Example: `cac`. | `string` | `null` | no |
 | <a name="input_rnd_length"></a> [rnd\_length](#input\_rnd\_length) | (Optional) Set the length of the `random_number` generated. | `number` | `2` | no |
 | <a name="input_subsc_code"></a> [subsc\_code](#input\_subsc\_code) | (Optional) Subscription code or abbreviation. Example: `azint`. | `string` | `null` | no |
 
