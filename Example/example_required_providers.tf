@@ -1,5 +1,5 @@
 #
-# Copyright 2022 Emmanuel Bergerat
+# Copyright 2023 - Emmanuel Bergerat
 #
 
 # -
@@ -9,7 +9,7 @@ terraform {
   required_providers {
     azurerm = {
       source  = "hashicorp/azurerm"
-      version = ">=3.0"
+      version = "~> 4.7"
     }
   }
 }

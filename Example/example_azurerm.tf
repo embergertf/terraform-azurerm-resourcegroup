@@ -7,14 +7,14 @@
 #--------------------------------------------------------------
 provider "azurerm" {
   # Reference: https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs#argument-reference
-  alias       = "testSubscription" # Comment/Remove this alias as it may not be needed
+  alias       = "example_test_Subscription" # Comment/Remove this alias as it may not be needed
   environment = "public"
-  partner_id  = "adb8eac6-989a-5354-8580-19055546ec74"
+  # partner_id  = ""
 
-  tenant_id       = "<Put testSubscription tenant_id value>"
-  subscription_id = "<Put testSubscription subscription_id value>"
-  client_id       = "<Put testSubscription client_id value>"
-  client_secret   = "<Put testSubscription client_secret value>"
+  tenant_id       = "<Put example_test_Subscription tenant_id value>"
+  subscription_id = "<Put example_test_Subscription subscription_id value>"
+  client_id       = "<Put example_test_Subscription client_id value>"
+  client_secret   = "<Put example_test_Subscription client_secret value>"
 
   features {}
 }

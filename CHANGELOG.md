@@ -13,6 +13,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 ### Removed -->
 
+## [1.3.5] - 2024-10-31 - Upgraded versions
+
+### Changed
+
+- `"app.terraform.io/embergertf/base/azurerm"` from version `~> 3.0.0` to `"~> 3.1"`
+- `"hashicorp/azurerm"` from version `">=3.0"` to `"~> 4.7"`
+- Renamed `providers.tf` to `required_providers.tf`
+- Updated `Example/` content
+
 ## [1.3.4] - 2023-02-24 - Set `region_code` as a required variable
 
 ### Changed
