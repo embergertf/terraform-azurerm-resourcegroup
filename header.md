@@ -17,7 +17,7 @@ None.
 module "rg" {
   # Terraform Cloud PMR use
   source  = "app.terraform.io/embergertf/resourcegroup/azurerm"
-  version = "~>1.3.3"
+  version = "~> 1.4"
 
   region_code     = var.main_region_code
   subsc_code      = var.subsc_nickname
