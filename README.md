@@ -28,6 +28,13 @@ module "rg" {
 
   additional_tags = local.base_tags
 }
+
+module "local_rg_naming_values" {
+  # Local
+  source = "../../terraform-azurerm-resourcegroup"
+
+  naming_values = var.naming_values_test
+}
 ```
 
 ## Documentation
@@ -44,13 +51,12 @@ module "rg" {
 
 | Name | Source | Version |
 |------|--------|---------|
-| <a name="module_rg_name"></a> [rg\_name](#module\_rg\_name) | app.terraform.io/embergertf/base/azurerm | ~> 3.1 |
+| <a name="module_rg_name"></a> [rg\_name](#module\_rg\_name) | app.terraform.io/embergertf/base/azurerm | ~> 4.0 |
 
 ### Inputs
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_region_code"></a> [region\_code](#input\_region\_code) | (Required) Resource region code. Must be compatible with base module. Example: `cac`. | `string` | n/a | yes |
 | <a name="input_add_random"></a> [add\_random](#input\_add\_random) | (Optional) When set to `true`, it will add a `rnd_length`'s long `random_number` at the name's end. | `bool` | `false` | no |
 | <a name="input_additional_name"></a> [additional\_name](#input\_additional\_name) | (Optional) Additional suffix to create resource uniqueness. It will be separated by a `'-'` from the "name's generated" suffix. Example: `lan1`. | `string` | `null` | no |
 | <a name="input_additional_tags"></a> [additional\_tags](#input\_additional\_tags) | (Optional) Additional tags for the Resource Group. | `map(string)` | `null` | no |
@@ -59,7 +65,9 @@ module "rg" {
 | <a name="input_iterator"></a> [iterator](#input\_iterator) | (Optional) Iterator to create resource uniqueness. It will be separated by a `'-'` from the "name's generated + additional\_name" concatenation. Example: `001`. | `string` | `null` | no |
 | <a name="input_max_length"></a> [max\_length](#input\_max\_length) | (Optional) Set the maximum length of the generated name. If over, the name will be trimmed to the `max_length`, considering the eventual `random_number` suffix. See this link for reference: [Resource name rules](https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/resource-name-rules) | `number` | `63` | no |
 | <a name="input_name_override"></a> [name\_override](#input\_name\_override) | (Optional) Full name to override all the name generation logic. Example: 'biglittletest' will generate the resource group name "'rg-biglittletest'". | `string` | `null` | no |
+| <a name="input_naming_values"></a> [naming\_values](#input\_naming\_values) | (Optional) A terraform object with the naming values in 1 variable. | <pre>object({<br>    region_code     = optional(string)<br>    subsc_code      = optional(string)<br>    env             = optional(string)<br>    base_name       = optional(string)<br>    additional_name = optional(string)<br>    iterator        = optional(string)<br>    owner           = optional(string)<br>    additional_tags = optional(map(string))<br>  })</pre> | `null` | no |
 | <a name="input_owner"></a> [owner](#input\_owner) | (Optional) Deployed resources owner. | `string` | `null` | no |
+| <a name="input_region_code"></a> [region\_code](#input\_region\_code) | (Optional) Resource region code. Must be compatible with base module. Example: `cac`. | `string` | `null` | no |
 | <a name="input_rnd_length"></a> [rnd\_length](#input\_rnd\_length) | (Optional) Set the length of the `random_number` generated. | `number` | `2` | no |
 | <a name="input_subsc_code"></a> [subsc\_code](#input\_subsc\_code) | (Optional) Subscription code or abbreviation. Example: `azint`. | `string` | `null` | no |
 
@@ -76,6 +84,7 @@ module "rg" {
 | <a name="output_id"></a> [id](#output\_id) | Resource group Id. |
 | <a name="output_location"></a> [location](#output\_location) | Resource group location. |
 | <a name="output_name"></a> [name](#output\_name) | Resource group name. |
+| <a name="output_naming_values"></a> [naming\_values](#output\_naming\_values) | A terraform object with the naming values in 1 variable. |
 | <a name="output_random_suffix"></a> [random\_suffix](#output\_random\_suffix) | Randomized piece of the Resource group name when "`add_random = true`". |
 | <a name="output_tags"></a> [tags](#output\_tags) | Resource group tags. |
 
