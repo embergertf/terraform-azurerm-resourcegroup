@@ -30,7 +30,7 @@ module "rg" {
 }
 
 module "local_rg_naming_values" {
-  # Local
+  # Local (for testing)
   source = "../../terraform-azurerm-resourcegroup"
 
   naming_values = var.naming_values_test
