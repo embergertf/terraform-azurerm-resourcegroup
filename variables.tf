@@ -1,14 +1,11 @@
 #
-# Copyright 2023 Emmanuel Bergerat
+# Copyright 2024 Emmanuel Bergerat
 #
 
 # -
 # Required Variables
 # -
-variable "region_code" {
-  type        = string
-  description = "(Required) Resource region code. Must be compatible with base module. Example: `cac`."
-}
+
 
 # -
 # Optional Variables
@@ -16,6 +13,25 @@ variable "region_code" {
 variable "name_override" {
   type        = string
   description = "(Optional) Full name to override all the name generation logic. Example: 'biglittletest' will generate the resource group name \"'rg-biglittletest'\"."
+  default     = null
+}
+variable "naming_values" {
+  type = object({
+    region_code     = optional(string)
+    subsc_code      = optional(string)
+    env             = optional(string)
+    base_name       = optional(string)
+    additional_name = optional(string)
+    iterator        = optional(string)
+    owner           = optional(string)
+    additional_tags = optional(map(string))
+  })
+  description = "(Optional) A terraform object with the naming values in 1 variable."
+  default     = null
+}
+variable "region_code" {
+  type        = string
+  description = "(Optional) Resource region code. Must be compatible with base module. Example: `cac`."
   default     = null
 }
 variable "subsc_code" {

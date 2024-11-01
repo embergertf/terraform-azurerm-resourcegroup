@@ -21,3 +21,17 @@ variable "additional_tags" {
   type        = map(string)
   default     = null
 }
+variable "naming_values_test" {
+  type = object({
+    region_code     = optional(string)
+    subsc_code      = optional(string)
+    env             = optional(string)
+    base_name       = optional(string)
+    additional_name = optional(string)
+    iterator        = optional(string)
+    owner           = optional(string)
+    additional_tags = optional(map(string))
+  })
+  description = "(Optional) A terraform object with the naming values in 1 variable."
+  default     = null
+}
