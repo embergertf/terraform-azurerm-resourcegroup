@@ -86,6 +86,7 @@ module "local_rg_naming_values" {
 | <a name="output_name"></a> [name](#output\_name) | Resource group name. |
 | <a name="output_naming_values"></a> [naming\_values](#output\_naming\_values) | A terraform object with the naming values in 1 variable. |
 | <a name="output_random_suffix"></a> [random\_suffix](#output\_random\_suffix) | Randomized piece of the Resource group name when "`add_random = true`". |
+| <a name="output_resource_group_name"></a> [resource\_group\_name](#output\_resource\_group\_name) | Resource group name. |
 | <a name="output_tags"></a> [tags](#output\_tags) | Resource group tags. |
 
 <!-- END_TF_DOCS -->
