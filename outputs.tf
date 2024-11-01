@@ -1,5 +1,5 @@
 #
-# Copyright 2022 Emmanuel Bergerat
+# Copyright 2024 Emmanuel Bergerat
 #
 
 output "id" {
@@ -21,4 +21,8 @@ output "tags" {
 output "random_suffix" {
   value       = module.rg_name.random_suffix
   description = "Randomized piece of the Resource group name when \"`add_random = true`\"."
+}
+output "naming_values" {
+  value       = module.rg_name.naming_values
+  description = "A terraform object with the naming values in 1 variable."
 }

@@ -1,5 +1,5 @@
 #
-# Copyright 2023 Emmanuel Bergerat
+# Copyright 2024 Emmanuel Bergerat
 #
 
 # Created  on:  Oct. 11th, 2022
@@ -17,9 +17,10 @@
 module "rg_name" {
   # Terraform Cloud PMR use
   source  = "app.terraform.io/embergertf/base/azurerm"
-  version = "~> 3.1"
+  version = "~> 4.0"
 
   name_override = var.name_override
+  naming_values = var.naming_values
 
   region_code     = var.region_code
   subsc_code      = var.subsc_code
@@ -29,12 +30,14 @@ module "rg_name" {
   iterator        = var.iterator
   owner           = var.owner
 
-  # Resource Group specifics settings
+  # Random name generation
+  add_random = var.add_random
+  rnd_length = var.rnd_length
+
+  # Resource naming inputs
   resource_type_code = "rg"
   max_length         = 90
   no_dashes          = false
-  add_random         = var.add_random
-  rnd_length         = var.rnd_length
 }
 
 # -

@@ -27,4 +27,11 @@ module "rg" {
 
   additional_tags = local.base_tags
 }
+
+module "local_rg_naming_values" {
+  # Local
+  source = "../../terraform-azurerm-resourcegroup"
+
+  naming_values = var.naming_values_test
+}
 ```

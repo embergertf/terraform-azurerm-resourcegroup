@@ -13,6 +13,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 ### Removed -->
 
+## [2.0.0] - 2024-10-31 - Adding `naming_values` for modules chaining
+
+### Added
+
+- variable `naming_values`
+- output `naming_values`
+
+### Changed
+
+- variable `subsc_code` is now optional
+- module `embergertf/base/azurerm` from version `~> 3.1` to `~> 4.0`
+
 ## [1.4.0] - 2024-10-31 - Upgraded versions
 
 ### Changed
