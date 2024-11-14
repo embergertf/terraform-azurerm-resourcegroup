@@ -13,6 +13,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 ### Removed -->
 
+## [2.1.1] - 2024-11-14 - Modified `additional_tags` processing
+
+### Modified
+
+- `additional_tags` moved from RG resource to base module
+
+## [2.1.0] - 2024-10-31 - Added output `resource_group_name`
+
+### Added
+
+- output `resource_group_name`
+
 ## [2.0.0] - 2024-10-31 - Adding `naming_values` for modules chaining
 
 ### Added

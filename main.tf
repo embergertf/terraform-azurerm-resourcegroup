@@ -2,11 +2,11 @@
 # Copyright 2024 Emmanuel Bergerat
 #
 
-# Created  on:  Oct. 11th, 2022
+# Created  on:  2022-10-11
 # Created  by:  Emmanuel
-# Modified on:  Oct.31st, 2024
+# Modified on:  2024-11-14
 # Modified by:  Emmanuel
-# Modification: Use of the updated base module v3.1.3, to allow more region_code values.
+# Modification: Update to base module version 4.0 + moved additional tags to base module
 # Overview:
 #   This module:
 #   - Creates an Azure Resource Group
@@ -29,6 +29,7 @@ module "rg_name" {
   additional_name = var.additional_name
   iterator        = var.iterator
   owner           = var.owner
+  additional_tags = var.additional_tags
 
   # Random name generation
   add_random = var.add_random
@@ -47,5 +48,5 @@ resource "azurerm_resource_group" "this" {
   name     = module.rg_name.name
   location = module.rg_name.location
 
-  tags = merge(module.rg_name.tags, var.additional_tags)
+  tags = module.rg_name.tags
 }
