@@ -2,21 +2,21 @@
 # Copyright 2024 Emmanuel Bergerat
 #
 
-output "id" {
-  value       = azurerm_resource_group.this.id
-  description = "Resource group Id."
-}
 output "name" {
   value       = azurerm_resource_group.this.name
   description = "Resource group name."
 }
-output "resource_group_name" {
-  value       = azurerm_resource_group.this.name
-  description = "Resource group name."
+output "id" {
+  value       = azurerm_resource_group.this.id
+  description = "Resource group Id."
 }
 output "location" {
   value       = azurerm_resource_group.this.location
   description = "Resource group location."
+}
+output "resource_group_name" {
+  value       = azurerm_resource_group.this.name
+  description = "Resource group name."
 }
 output "tags" {
   value       = azurerm_resource_group.this.tags
